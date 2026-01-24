@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ENVI • Cài đặt Anki</title>
+  <link rel="stylesheet" href="bootstrapcustom.min.css">
+  <style>
+    body{background:#f6f7fb;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+    .page{max-width:900px;margin:24px auto;padding:0 16px;}
+    .card{background:#fff;border:1px solid rgba(17,24,39,.08);border-radius:14px;padding:16px;box-shadow:0 10px 25px rgba(17,24,39,.06);}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{font-size:12px;color:#6b7280;display:block;margin-bottom:6px}
+    select{width:100%;border:1px solid #e5e7eb;border-radius:12px;padding:10px 12px}
+    .actions{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
+    button{border-radius:999px;padding:10px 14px;border:1px solid #e5e7eb;background:#fff}
+    button.primary{background:#16a34a;border-color:#16a34a;color:#fff}
+    .status{font-size:12px;color:#6b7280;margin-top:8px}
+    .warn{color:#b91c1c}
+    @media (max-width:760px){.row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <h2 style="margin:0 0 6px 0;font-size:18px;">Cài đặt Anki (AnkiConnect)</h2>
+      <div class="status">Chọn Deck / Note type / map field. Lưu xong thì popup “Save to Anki” sẽ dùng cấu hình này.</div>
+
+      <div class="status" id="ankiStatus">Trạng thái: <b id="ankiPing">chưa kiểm tra</b></div>
+      <div class="status warn" id="ankiWarn" style="display:none;"></div>
+
+      <div class="row" style="margin-top:12px;">
+        <div>
+          <label>Deck</label>
+          <select id="ankiDeck"></select>
+        </div>
+        <div>
+          <label>Note type</label>
+          <select id="ankiModel"></select>
+        </div>
+
+        <div style="grid-column:1/-1;margin-top:6px">
+          <label>Map field (sau khi chọn Note type)</label>
+          <div class="status">Chọn field Anki tương ứng với dữ liệu ENVI.</div>
+        </div>
+
+        <div><label>Word</label><select id="map_word"></select></div>
+        <div><label>Phonetic</label><select id="map_phonetic"></select></div>
+        <div><label>Part of speech</label><select id="map_pos"></select></div>
+        <div><label>Meanings</label><select id="map_meanings"></select></div>
+        <div><label>Examples</label><select id="map_examples"></select></div>
+        <div><label>Source URL</label><select id="map_pageUrl"></select></div>
+        <div><label>CreatedAt</label><select id="map_createdAt"></select></div>
+      </div>
+
+      <div class="actions">
+        <button id="btnReload">Tải lại danh sách</button>
+        <button class="primary" id="btnSaveCfg">Lưu cấu hình mặc định</button>
+      </div>
+
+      <div class="status">Gợi ý: nếu không thấy deck/note type → mở Anki + cài AnkiConnect + kiểm tra port 8765.</div>
+    </div>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

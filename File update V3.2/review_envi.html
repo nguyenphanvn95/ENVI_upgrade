@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ENVI • Review từ vựng</title>
+  <link rel="stylesheet" href="review_envi.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button id="btnBack" class="icon-btn" title="Quay lại">←</button>
+    <div class="title">
+      <div class="title-main">ENVI Review</div>
+      <div class="title-sub" id="counter">0 / 0</div>
+    </div>
+    <button id="btnSettings" class="icon-btn" title="Cài đặt">⚙</button>
+  </header>
+
+  <main class="wrap">
+    <section class="card-area">
+      <div id="flashcard" class="card" tabindex="0" aria-label="Flashcard">
+        <div class="card-inner">
+          <!-- FRONT -->
+          <div class="card-face card-front">
+            <div class="front-top">
+              <div id="frontPos" class="pos"></div>
+            </div>
+
+            <div id="frontMain" class="front-main"></div>
+
+            <div class="front-mid">
+              <button id="btnAudio" class="audio-btn" title="Phát âm">🔊</button>
+              <div id="frontIpa" class="ipa"></div>
+            </div>
+
+            <div id="frontExamples" class="examples"></div>
+          </div>
+
+          <!-- BACK -->
+          <div class="card-face card-back">
+            <div id="backMain" class="back-main"></div>
+            <div id="backExtras" class="back-extras"></div>
+
+            <div id="sourceBlock" class="source-block">
+              <div class="source-label">Nguồn</div>
+              <a id="sourceLink" href="#" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <button id="btnPrev" class="nav-btn" title="Trước">‹</button>
+        <button id="btnNext" class="nav-btn" title="Sau">›</button>
+      </div>
+    </section>
+
+    <footer class="hint">
+      ⌨️ Dùng phím mũi tên (← →) để điều hướng và phím <b>Space</b> để lật thẻ.
+    </footer>
+  </main>
+
+  <!-- Settings modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div class="modal-title">Cài đặt Review</div>
+        <button id="btnCloseModal" class="icon-btn" title="Đóng">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-nav">
+          <button class="tab active" data-tab="flashcard">Flashcard</button>
+        </div>
+
+        <div class="panel" data-panel="flashcard">
+          <div class="cols">
+            <div class="col">
+              <div class="col-title">Mặt trước</div>
+
+              <label class="row">
+                <span>Nội dung chính</span>
+                <select id="frontMainSelect">
+                  <option value="word">Word (EN)</option>
+                  <option value="meaning1">Nghĩa 1 (VI)</option>
+                  <option value="example_en">Ví dụ EN (dòng 1)</option>
+                  <option value="example_vi">Ví dụ VI (dòng 1)</option>
+                </select>
+              </label>
+
+              <label class="row">
+                <span>Loại từ</span>
+                <input id="toggleFrontPos" type="checkbox" />
+              </label>
+
+              <label class="row">
+                <span>Phiên âm</span>
+                <input id="toggleFrontIpa" type="checkbox" />
+              </label>
+
+              <label class="row">
+                <span>Phát âm</span>
+                <input id="toggleFrontAudio" type="checkbox" />
+              </label>
+
+              <label class="row">
+                <span>Ví dụ (EN + VI)</span>
+                <input id="toggleFrontExamples" type="checkbox" />
+              </label>
+            </div>
+
+            <div class="col">
+              <div class="col-title">Mặt sau</div>
+
+              <label class="row">
+                <span>Nội dung chính</span>
+                <select id="backMainSelect">
+                  <option value="meaningAll">Nghĩa (VI)</option>
+                  <option value="word">Word (EN)</option>
+                </select>
+              </label>
+
+              <label class="row">
+                <span>Loại từ</span>
+                <input id="toggleBackPos" type="checkbox" />
+              </label>
+
+              <label class="row">
+                <span>Phiên âm</span>
+                <input id="toggleBackIpa" type="checkbox" />
+              </label>
+
+              <label class="row">
+                <span>Phát âm</span>
+                <input id="toggleBackAudio" type="checkbox" />
+              </label>
+
+              <label class="row">
+                <span>Ví dụ</span>
+                <input id="toggleBackExamples" type="checkbox" />
+              </label>
+
+              <label class="row">
+                <span>Link nguồn</span>
+                <input id="toggleBackSource" type="checkbox" />
+              </label>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button id="btnSaveSettings" class="primary">Lưu thay đổi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="audioEl"></audio>
+  <script src="review_envi.js"></script>
+</body>
+</html>
