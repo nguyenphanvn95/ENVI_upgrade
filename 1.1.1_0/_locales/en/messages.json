@@ -1,0 +1,95 @@
+{
+   "Check_source_code_in_github": {
+      "message": "Check source code in github"
+   },
+   "Comment_on_this_extension": {
+      "message": "Comment on this extension"
+   },
+   "Detect_PDF": {
+      "message": "Dịch file PDF"
+   },
+   "Enable_OCR": {
+      "message": "Enable OCR"
+   },
+   "Enable_TTS": {
+      "message": "Phát âm"
+   },
+   "Enable_Tooltip": {
+      "message": "Dịch nhanh khi di chuột"
+   },
+   "Exclude_Language": {
+      "message": "Exclude Language"
+   },
+   "OCR_Detection_Language": {
+      "message": "OCR Detection Language"
+   },
+   "Privacy_Policy": {
+      "message": "Privacy Policy"
+   },
+   "Reverse_Translate_Language": {
+      "message": "Reverse Translate Language"
+   },
+   "Review_Page": {
+      "message": "Review Page"
+   },
+   "Source_code": {
+      "message": "Source code"
+   },
+   "TTS_Activation_Hold_Key": {
+      "message": "TTS Activation Hold Key"
+   },
+   "TTS_Speed": {
+      "message": "TTS Speed"
+   },
+   "TTS_Volume": {
+      "message": "TTS Volume"
+   },
+   "Text_Detect_Type": {
+      "message": "Dịch theo"
+   },
+   "Tooltip_Activation_Hold_Key": {
+      "message": "Tooltip Activation Hold Key"
+   },
+   "Tooltip_Background_Blur": {
+      "message": "Tooltip Background Blur"
+   },
+   "Tooltip_Background_Color": {
+      "message": "Tooltip Background Color"
+   },
+   "Tooltip_Font_Color": {
+      "message": "Tooltip Font Color"
+   },
+   "Tooltip_Font_Size": {
+      "message": "Tooltip Font Size"
+   },
+   "Tooltip_Text_Align": {
+      "message": "Tooltip Text Align"
+   },
+   "Tooltip_Width": {
+      "message": "Tooltip Width"
+   },
+   "Translate_From": {
+      "message": "Translate From"
+   },
+   "Translate_Into": {
+      "message": "Dịch sang"
+   },
+   "Translate_When": {
+      "message": "Translate When"
+   },
+   "Translator": {
+      "message": "Translator"
+   },
+   "User_privacy_policy": {
+      "message": "User privacy policy"
+   },
+   "Voice_for_": {
+      "message": "Voice for "
+   },
+   "appDesc": {
+      "message": "Tra từ điển Anh Việt, dịch mọi ngôn ngữ ngay trên trang web với Từ điển ENVI"
+   },
+   "appName": {
+      "message": "Từ điển Anh Việt ENVI"
+   }
+}

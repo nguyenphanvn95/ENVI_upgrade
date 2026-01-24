@@ -1,78 +1,47 @@
 {
-  "manifest_version": 3,
-  "name": "__MSG_appName__",
-  "description": "__MSG_appDesc__",
-  "version": "1.1.1",
-
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "Từ điển Anh Việt ENVI"
-  },
-
-  "background": {
-    "service_worker": "background.js"
-  },
-
-  "permissions": [
-    "storage",
-    "tts",
-    "tabs",
-    "scripting",
-    "contextMenus",
-    "webNavigation"
-  ],
-
-  "host_permissions": ["<all_urls>"],
-
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["contentScript.js"],
-      "css": ["bootstrapcustom.min.css"],
-      "run_at": "document_idle",
-      "all_frames": true
-    }
-  ],
-
-  "content_security_policy": {
-    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'none'"
-  },
-
-  "default_locale": "vi",
-
-  "icons": {
-    "16": "icons/icon_16.png",
-    "32": "icons/icon_32.png",
-    "48": "icons/icon_48.png",
-    "128": "icons/icon_128.png"
-  },
-
-  "omnibox": {
-    "keyword": "envi"
-  },
-
-  "options_ui": {
-    "page": "popup.html"
-  },
-
-  "sandbox": {
-    "pages": ["opencvHandler.html"]
-  },
-
-  "web_accessible_resources": [
-    {
-      "matches": ["<all_urls>"],
-      "resources": [
-        "pdfjs/web/viewer.html",
-        "ocr.html",
-        "opencvHandler.html",
-        "vocab_manager.html",
-        "vocab_manager.js"
-      ]
-    }
-  ],
-
-  "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
-
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxf59QsnhS+WrB66GvpjnUh2jgTvE+e7975hz+TEF5FrDA8V03tGUq5L6NkRNCqJ3+LaOOEJNBl5gyeACJwW2IPh/LXQvjfx9+45G/Nl6PLSkaWrGiBNyLlbYs1Fl1gnsq2jDYKWsIqmL+RAJC+98Dvve0Aq8fllHvfB6T9EwhtFbXIasuWB8RxqFZOkagC58B0wtfff+jqjCtbRmRMuD9nloFKWZWdiso5jmU0tS3YyhZN+YiOPZGwfIIuOG1KB9LEnH+uY4X1xO9R2NL0ZyGCK92qojWOWOzl0RbLmXAyD0I2+YmKd6JZAVEq3nBYQEjraOKKfiqKf1kfKlE8LqQQIDAQAB"
+   "action": {
+      "default_popup": "popup.html",
+      "default_title": "Từ điển Anh Việt ENVI"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "bootstrapcustom.min.css" ],
+      "js": [ "contentScript.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_idle"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval' ;  object-src 'none'"
+   },
+   "default_locale": "vi",
+   "description": "__MSG_appDesc__",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icons/icon_128.png",
+      "16": "icons/icon_16.png",
+      "32": "icons/icon_32.png",
+      "48": "icons/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxf59QsnhS+WrB66GvpjnUh2jgTvE+e7975hz+TEF5FrDA8V03tGUq5L6NkRNCqJ3+LaOOEJNBl5gyeACJwW2IPh/LXQvjfx9+45G/Nl6PLSkaWrGiBNyLlbYs1Fl1gnsq2jDYKWsIqmL+RAJC+98Dvve0Aq8fllHvfB6T9EwhtFbXIasuWB8RxqFZOkagC58B0wtfff+jqjCtbRmRMuD9nloFKWZWdiso5jmU0tS3YyhZN+YiOPZGwfIIuOG1KB9LEnH+uY4X1xO9R2NL0ZyGCK92qojWOWOzl0RbLmXAyD0I2+YmKd6JZAVEq3nBYQEjraOKKfiqKf1kfKlE8LqQQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_appName__",
+   "omnibox": {
+      "keyword": "envi"
+   },
+   "options_ui": {
+      "page": "popup.html"
+   },
+   "permissions": [ "storage", "tts", "tabs", "scripting", "contextMenus", "webNavigation" ],
+   "sandbox": {
+      "pages": [ "opencvHandler.html" ]
+   },
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.1.1",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "pdfjs/web/viewer.html", "ocr.html", "opencvHandler.html" ]
+   } ]
 }
